@@ -11,8 +11,9 @@ class Join extends CI_Controller
     
     public function index()
     {
+        $this->load-helper('form');
         $this->load->view('header');
-        echo "Hello from Space";
+        $this->load->view('TheOp/form');
         $this->load->view('footer');
     }
 
