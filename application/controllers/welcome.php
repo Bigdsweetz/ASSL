@@ -19,7 +19,12 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+        $this->load->model('register');// this->load->model('name of the page you created')
+        $data['register_list'] = $this->register->get_register(); //$data['what your defining'] = $this->register->get_name of the page you created();
+        echo var_dump($data['register_list']);//echo var_dump($data['what your defining']);
+        
 		$this->load->view('welcome_message');
+        
 	}
 }
 
