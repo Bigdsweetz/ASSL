@@ -1,6 +1,6 @@
 <?php 
 
-class LoginModel extends CI_Model
+class LoginModel extends CI_Model  //This checkes to see if the username and password that was given matches anything in the database. 
 
     public function login($username, $password)
     {
