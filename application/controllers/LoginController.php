@@ -18,7 +18,10 @@ class LoginController  extends CI_Controller
         
         if($this->form_validation->run() ==false)
         {
+            $this->load->view('header');  //this loads the header for the page
+            $this->load->view('navbar');  //this loads the nav bar for the page
             $this->load->view('login'); //If the user puts in the wrong username and/or password, it reloads the Login page
+            $this->load->view('footer');  //this loads the footer of the page
         }else{
             redirect('HomeController/Index');
         }
