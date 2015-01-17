@@ -1,1 +1,0 @@
-<h2> Thank you for registering for this site!</h2>

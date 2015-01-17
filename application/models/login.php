@@ -1,6 +1,6 @@
 <?php 
 
-class register extends CI_Model//class (name of file) extends CI_Model
+class login extends CI_Model//class (name of file) extends CI_Model
 {
 
     public function __construct() //This loads the database.
