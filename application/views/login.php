@@ -7,6 +7,15 @@
 
 <?php echo form_open('LoginController/checklogin'); //This makes the page run the checklogin function upon submission ?>
 
+ <?php
+                        $attr = array (
+                        'class'=>'register_form'
+                        ); //I can set the dynamics of the fieldset here. Such as centerd and so forth.
+
+
+echo form_fieldset('', $attr); //
+echo form_open(''); //This makes the page run the checklogin function upon submission ?>
+
 Username: <br/>
 <input type='text' name='username'/><br/>
 
@@ -17,3 +26,7 @@ Password: <br/>
 
 
 </div>
+    
+ <?php echo form_close(); 
+echo form_fieldset_close();
+?>

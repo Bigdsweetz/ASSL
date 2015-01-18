@@ -4,6 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
             <title>Welcome to The Opinion Point</title>
             <link href="../../TheOP/css/bootstrap.css" rel="stylesheet" type="text/css">
+            <link href="../../TheOP/css/main.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <div class="container">
