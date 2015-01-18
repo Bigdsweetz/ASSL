@@ -12,6 +12,41 @@
                         echo form_fieldset('', $attr); //
                         echo form_open(''); //This makes the page run the checklogin function upon submission
                         /* The below is the input for the registration form. This should input the data into the database. */
+                        
+                        echo form_label('Create a Username : '); //This is where the user inputs their e-mail addres
+                        $data = array ( 
+                            'id'=>'username',
+                            'name'=>'username',
+                            'size'=>'30%',
+                            'value'=>set_value('text_class'),
+                        );//This is the data going into the input box
+                        
+                        echo form_input($data); //This is the actual input box
+                        echo form_error('username');
+
+                        echo form_label('Enter your First name: '); //This is where the user inputs their e-mail addres
+                        $data = array ( 
+                            'id'=>'first_name',
+                            'name'=>'Last Name',
+                            'size'=>'30%',
+                            'value'=>set_value('text_class'),
+                        );//This is the data going into the input box
+                        
+                        echo form_input($data); //This is the actual input box
+                        echo form_error('firstname');
+
+
+                        echo form_label('Enter your Last name: '); //This is where the user inputs their e-mail addres
+                        $data = array ( 
+                            'id'=>'last_name',
+                            'name'=>'Last Name',
+                            'size'=>'30%',
+                            'value'=>set_value('text_class'),
+                        );//This is the data going into the input box
+                        
+                        echo form_input($data); //This is the actual input box
+                        echo form_error('lastname');
+                        
                         echo form_label('Enter your Email : '); //This is where the user inputs their e-mail addres
                         $data = array ( 
                             'name'=>'email',
@@ -21,6 +56,18 @@
                         );//This is the data going into the input box
                         
                         echo form_input($data); //This is the actual input box
+                        echo form_error('email');
+
+                        echo form_label('Enter your password : '); //This is where the user inputs their e-mail addres
+                        $data = array ( 
+                            'id'=>'password',
+                            'name'=>'password',
+                            'size'=>'30%',
+                            'value'=>set_value('text_class'),
+                        );//This is the data going into the input box
+                        
+                        echo form_input($data); //This is the actual input box
+                        echo form_error('password');
 
                         $data = array ( 
                             'name'=>'submit',
