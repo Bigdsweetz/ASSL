@@ -1,5 +1,5 @@
 <?php 
-
+//This is the SITE home page...not be confused with the USER home page
 class IndexController  extends CI_Controller 
 {
 
