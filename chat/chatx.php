@@ -1,5 +1,8 @@
 <?php
 session_start();
+$me = $_POST['me'];
+$you= $_POST['you'];
+
 $_SESSION['username'] = $me; // Must be already set
 ?>
 
@@ -18,11 +21,11 @@ body {
 }
 </style>
 
-<link type="text/css" rel="stylesheet" media="all" href="<?=base_url()?>chat/css/chat.css" />
-<link type="text/css" rel="stylesheet" media="all" href="<?=base_url()?>chat/css/screen.css" />
+<link type="text/css" rel="stylesheet" media="all" href="css/chat.css" />
+<link type="text/css" rel="stylesheet" media="all" href="css/screen.css" />
 
 <!--[if lte IE 7]>
-<link type="text/css" rel="stylesheet" media="all" href="<?=base_url()?>chat/css/screen_ie.css" />
+<link type="text/css" rel="stylesheet" media="all" href="css/screen_ie.css" />
 <![endif]-->
 
 </head>
@@ -34,8 +37,8 @@ body {
 
 </div>
 
-<script type="text/javascript" src="<?=base_url()?>chat/js/jquery.js"></script>
-<script type="text/javascript" src="<?=base_url()?>chat/js/chat.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/chat.js"></script>
 
 </body>
 </html>

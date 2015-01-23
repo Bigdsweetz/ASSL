@@ -20,7 +20,8 @@ body {
 
 <link type="text/css" rel="stylesheet" media="all" href="<?=base_url()?>chat/css/chat.css" />
 <link type="text/css" rel="stylesheet" media="all" href="<?=base_url()?>chat/css/screen.css" />
-
+<script type="text/javascript" src="<?=base_url()?>chat/js/jquery.js"></script>
+<script type="text/javascript" src="<?=base_url()?>chat/js/chat.js"></script>
 <!--[if lte IE 7]>
 <link type="text/css" rel="stylesheet" media="all" href="<?=base_url()?>chat/css/screen_ie.css" />
 <![endif]-->
@@ -30,12 +31,12 @@ body {
 <div id="main_container">
 
 <a href="javascript:void(0)" onclick="javascript:chatWith('<?=$you?>')">Chat With <?=$you?></a>
+
 <!-- YOUR BODY HERE -->
 
 </div>
 
-<script type="text/javascript" src="<?=base_url()?>chat/js/jquery.js"></script>
-<script type="text/javascript" src="<?=base_url()?>chat/js/chat.js"></script>
+
 
 </body>
 </html>
