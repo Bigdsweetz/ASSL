@@ -44,8 +44,6 @@ class RegisterController  extends CI_Controller
             $this->load->model('RegisterModel');//Loads the register model
             
             $user_info = array(
-                'first_name'=>$this->input->post('first_name'),
-                'last_name'=>$this->input->post('last_name'),
                 'username'=>$this->input->post('username'),
                 'email'=>$this->input->post('email'),
                 'password'=>md5($this->input->post('password')),

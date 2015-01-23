@@ -1,11 +1,11 @@
-<H1>Welcome to the Blog</H1>
+<H1>Create a Blog</H1>
 
 <?php foreach($query->result() as $row): ?>
 
 <h3><?=$row->title?></h3>
 <p><?=$row->body?></p>
 
-<p><?=anchor('BlogController/comments/' .$row->id, 'Comments');?></p>
+<p><?=anchor('BlogPostController/blogs/' .$row->id, 'blogs');?></p>
 
 <hr>
 

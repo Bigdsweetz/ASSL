@@ -1,10 +1,10 @@
 <?php 
 /* 
-This is for POSTING to the COMMENTS
+This is for POSTING to the BLOG
 */
-class BlogController  extends CI_Controller 
+class BlogPostController  extends CI_Controller 
 {
-    function Blog()
+   function Blog_Post()
     {
         parent::Controller();
        $this->load->helper('url');
@@ -12,33 +12,33 @@ class BlogController  extends CI_Controller
     }
     
     
-    public function index()
+   public function index()
     {
         $data['query'] = $this->db->get('entries'); 
         $this->load->view('header');  //this loads the header for the page
         $this->load->view('navbar');  //this loads the nav bar for the page
-        $this->load->view('blog',$data);  //this get's the data from the blog table and displays it
+        $this->load->view('create_blog',$data);   //this loads the body of the page
         $this->load->view('footer');  //this loads the footer of the page
     }
     
-    function comments()
+    function blogs()
     {
-        $data['title'] = " My Comment Title";
-        $data['heading'] = " My Comment Heading";
-        $this->db->where('entry_id', $this->uri->segment(3));
-        $data['query'] = $this->db->get('comments'); 
+        $data['title'] = " My Blog Title";
+        $data['heading'] = " My Blog Heading";
+        $this->db->where('id', $this->uri->segment(3));
+        $data['query'] = $this->db->get('entries'); 
         
         $this->load->view('header');  //this loads the header for the page
         $this->load->view('navbar');  //this loads the nav bar for the page
-        $this->load->view('comment_view', $data);
+        $this->load->view('blog_view', $data);
         $this->load->view('footer');  //this loads the footer of the page
     }
     
-    function comment_insert()
+    function blog_insert()
     {
-        $this->db->insert('comments', $_POST);
+        $this->db->insert('entries', $_POST);
         
-        redirect('BlogController/comments/' .$_POST['entry_id']);
+        redirect('BlogController/comments/');
     }
     
 }

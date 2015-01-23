@@ -24,28 +24,6 @@
                         echo form_input($data); //This is the actual input box
                         echo form_error('username');
 
-                        /*echo form_label('Enter your First name: '); //This is where the user inputs their first name
-                        $data = array ( 
-                            'id'=>'first_name',
-                            'name'=>'Last Name',
-                            'size'=>'30%',
-                            'value'=>set_value('text_class'),
-                        );//This is the data going into the input box
-                        
-                        echo form_input($data); //This is the actual input box
-                        echo form_error('firstname');
-
-
-                        echo form_label('Enter your Last name: '); //This is where the user inputs their last names
-                        $data = array ( 
-                            'id'=>'last_name',
-                            'name'=>'Last Name',
-                            'size'=>'30%',
-                            'value'=>set_value('text_class'),
-                        );//This is the data going into the input box
-                        
-                        echo form_input($data); //This is the actual input box
-                        echo form_error('lastname'); */
                         
                         echo form_label('Enter your Email : '); //This is where the user inputs their e-mail addres
                         $data = array ( 
