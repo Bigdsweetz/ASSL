@@ -5,7 +5,7 @@
             <li><a href="<?php echo site_url('IndexController'); ?>">HOME</A></li>
             <li><a href="<?php echo site_url('HomeController'); ?>">PROFILE</A></li>
             <li><a href="<?php echo site_url('ChatController'); ?>">CHAT</A></li>
-            <li><a href="<?php echo site_url('ForumController'); ?>">FORUM</A></li>
+            <li><a href="<?php echo site_url('BlogController'); ?>">BLOG</A></li>
             </ul>
         
     </div>

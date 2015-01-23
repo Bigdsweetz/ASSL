@@ -39,7 +39,7 @@
 */
 
 $route['default_controller'] = "IndexController";
-$route['404_override'] = '';
+$route['scaffolding_trigger'] = 'dj';
 
 
 /* End of file routes.php */
