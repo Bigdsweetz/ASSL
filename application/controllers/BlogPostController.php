@@ -41,6 +41,14 @@ class BlogPostController  extends CI_Controller
         redirect('BlogController/comments/');
     }
     
+    function create_blog(){
+        $this->load->view('header');  //this loads the header for the page
+        $this->load->view('navbar');  //this loads the nav bar for the page
+        $this->load->view('blog_post_create');
+        $this->load->view('footer');  //this loads the footer of the page
+        
+    }
+    
 }
 
 ?>

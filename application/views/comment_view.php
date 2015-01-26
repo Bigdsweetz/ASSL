@@ -17,7 +17,7 @@
 
 <p><?=anchor('BlogController', 'Back to Blog');?></p>
 </br>
-<p><?=anchor('BlogPostController', 'Post a new Blog');?></p>
+
 
 
 

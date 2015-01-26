@@ -15,18 +15,7 @@
     <?php endforeach; ?>
 <?php endif; ?>
 
-<p><?=anchor('BlogController', 'Back to comments');?></p>
+<p><?=anchor('BlogPostController', 'Back to Blogs');?></p>
 </br>
-<p><?=anchor('BlogPostController', 'Post a new Blog');?></p>
-
-
-
-<?=form_open('BlogPostController/blog_insert');?>
-
-
-<p><textarea name="body" rows="10"></textarea></p>
-
-<p><input type="text" name="title" /></p>
-
-<p><input type ="submit" value="Submit blog" /></p>
+<p><?=anchor('BlogPostController/create_blog/', 'Post a new Blog');?></p>
 
