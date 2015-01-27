@@ -11,3 +11,12 @@ margin: 0 auto;
 
 }
 
+/* Removes link underline from profile picture link (so our 'edit' link is invisible) */
+a.editprofile {
+text-decoration: none;	
+}
+ 
+/* Makes "edit" icon appear on hover */
+a.editprofile:hover {
+background: url('http://www.yourwebsite.com/images/edit.png') 95px 5px no-repeat;
+}
