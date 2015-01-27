@@ -20,14 +20,14 @@ class HomeController  extends CI_Controller
     
 	function do_upload()
 	{
-		$config['upload_path'] = '../../TheOP/upload/';
+		$config['upload_path'] = '../../TheOP/upload/'; //This is supposed to have the files that are uploaded go to this folder.
 		$config['allowed_types'] = 'gif|jpg|png';
 		$config['max_size']	= '100';
 		$config['max_width']  = '1024';
 		$config['max_height']  = '768';
 
 		$this->load->library('upload', $config);
-        $this->upload->initialize($config);
+                $this->upload->initialize($config);
 
 		if ( ! $this->upload->do_upload())
 		{
