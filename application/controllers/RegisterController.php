@@ -41,7 +41,7 @@ class RegisterController  extends CI_Controller
             $this->load->view('footer');  //this loads the footer of the page
         }
         else{
-            $this->load->model('RegisterModel');//Loads the register model
+            $this->load->model('registermodel');//Loads the register model
             
             $user_info = array(
                 'username'=>$this->input->post('username'),
@@ -50,8 +50,8 @@ class RegisterController  extends CI_Controller
             
             );
                 
-            $this->RegisterModel->add_user($user_info);    
-            redirect('HomeController/Index');
+            $this->registermodel->add_user($user_info);    
+            redirect('/appunto-auth/user/login');
         }
        
     }
