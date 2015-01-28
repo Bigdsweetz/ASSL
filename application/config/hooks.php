@@ -9,7 +9,13 @@
 |	http://codeigniter.com/user_guide/general/hooks.html
 |
 */
-
+$hook['post_controller_constructor'] = array(
+    'class'    => 'Appunto_auth',
+    'function' => 'require_authentication_hook',
+    'filename' => 'appunto-auth/Appunto_auth.php',
+    'filepath' => 'libraries',
+    'params'   => array()
+);
 
 
 /* End of file hooks.php */

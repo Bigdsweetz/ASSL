@@ -38,8 +38,9 @@
 |
 */
 
-$route['default_controller'] = "IndexController";
-$route['scaffolding_trigger'] = 'dj';
+$route['default_controller'] = 'IndexController';
+$route['404_override'] = '';
+$route['translate_uri_dashes'] = FALSE;
 
 
 /* End of file routes.php */
