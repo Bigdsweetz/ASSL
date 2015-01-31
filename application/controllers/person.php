@@ -40,11 +40,11 @@ class Person extends CI_Controller {
 		// generate table data
 		$this->load->library('table');
 		$this->table->set_empty("&nbsp;");
-		$this->table->set_heading('No', 'Username','Name', 'Gender', 'Date of Birth (dd-mm-yyyy)', 'Actions');
+		$this->table->set_heading('No', 'Username','Name', 'Gender', 'Created', 'Actions');
 		$i = 0 + $offset;
 		foreach ($persons as $person)
 		{
-			$this->table->add_row(++$i, $person->username, $person->name, strtoupper($person->gender)=='M'? 'Male':'Female', date('d-m-Y',strtotime($person->created)), 
+			$this->table->add_row(++$i, $person->username, $person->name, $person->surname,strtoupper($person->gender)=='M'? 'Male':'Female', date('d-m-Y',strtotime($person->created)), 
 				anchor('person/view/'.$person->id,'view',array('class'=>'view')).' '.
 				anchor('person/update/'.$person->id,'update',array('class'=>'update'))//.' '.
 				//anchor('person/delete/'.$person->id,'delete',array('class'=>'delete','onclick'=>"return confirm('Are you sure want to delete this person?')"))
@@ -75,7 +75,7 @@ class Person extends CI_Controller {
 		// load view
         $this->load->view('header');  //this loads the header for the page
         $this->load->view('navbar');  //this loads the nav bar for the page
-		$this->load->view('personEdit', $data);
+		$this->load->view('personedit', $data);
         $this->load->view('footer');
 	}
 	
@@ -111,7 +111,7 @@ class Person extends CI_Controller {
 		// load view
         $this->load->view('header');  //this loads the header for the page
         $this->load->view('navbar');  //this loads the nav bar for the page
-		$this->load->view('personEdit', $data);
+		$this->load->view('personedit', $data);
         $this->load->view('footer');
 	}
 	
@@ -127,7 +127,7 @@ class Person extends CI_Controller {
 		// load view
 		$this->load->view('header');  //this loads the header for the page
         $this->load->view('navbar');  //this loads the nav bar for the page
-        $this->load->view('personView', $data);
+        $this->load->view('personview', $data);
         $this->load->view('footer');
 	}
 	
@@ -136,7 +136,7 @@ class Person extends CI_Controller {
 		// set validation properties
 		$this->_set_rules();
 		
-		// prefill form values
+		// prefill form values  this get's the data from the database
 		$person = $this->Person_model->get_by_id($id)->row();
         $this->form_data = new stdClass();
 		$this->form_data->name = $person->name;
@@ -148,21 +148,21 @@ class Person extends CI_Controller {
 		// set common properties
 		$data['title'] = 'Update person';
 		$data['message'] = '';
-		$data['action'] = site_url('person/updatePerson');
+		$data['action'] = site_url('person/updateperson');
 		$data['link_back'] = anchor('person/index/','Back to User page',array('class'=>'back'));
 	
 		// load view
         $this->load->view('header');  //this loads the header for the page
         $this->load->view('navbar');  //this loads the nav bar for the page
-		$this->load->view('personEdit', $data);
+		$this->load->view('personedit', $data);
         $this->load->view('footer');
 	}
 	
 	function updatePerson()
 	{
 		// set common properties
-		$data['title'] = 'Update person';
-		$data['action'] = site_url('person/updatePerson');
+		$data['title'] = 'update person';
+		$data['action'] = site_url('person/updateperson');
 		$data['link_back'] = anchor('person/index/','Back to User page',array('class'=>'back'));
 		
 		// set empty default form field values
@@ -183,7 +183,7 @@ class Person extends CI_Controller {
                             'surname' => $this->input->post('surname'),
                             'username' => $this->input->post('username'),
 							'gender' => $this->input->post('gender'),
-							'dob' => date('Y-m-d', strtotime($this->input->post('dob'))));
+							'created' => date('Y-m-d', strtotime($this->input->post('created'))));
 			$this->Person_model->update($id,$person);
 			
 			// set user message
@@ -193,7 +193,7 @@ class Person extends CI_Controller {
 		// load view
         $this->load->view('header');  //this loads the header for the page
         $this->load->view('navbar');  //this loads the nav bar for the page
-		$this->load->view('personEdit', $data);
+		$this->load->view('personedit', $data);
         $this->load->view('footer');
 	}
 	
@@ -213,17 +213,19 @@ class Person extends CI_Controller {
 		$this->form_data->id = '';
 		$this->form_data->username = '';
         $this->form_data->name = '';
+        $this->form_data->surname = '';
 		$this->form_data->gender = '';
-		$this->form_data->dob = '';
+		$this->form_data->created = '';
 	}
 	
 	// validation rules
 	function _set_rules()
 	{
 		$this->form_validation->set_rules('username', 'UserName', 'trim|required');
+        $this->form_validation->set_rules('surname', 'SurName', 'trim|required');
         $this->form_validation->set_rules('name', 'Name', 'trim|required');
 		$this->form_validation->set_rules('gender', 'Gender', 'trim|required');
-		$this->form_validation->set_rules('dob', 'DoB', 'trim|required|callback_valid_date');
+        $this->form_validation->set_rules('created', 'created', 'trim|required|callback_valid_date');
 		
 		$this->form_validation->set_message('required', '* required');
 		$this->form_validation->set_message('isset', '* required');

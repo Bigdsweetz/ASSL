@@ -1,3 +1,4 @@
+
 <H1>Welcome to the Blog</H1>
 
 <?php if ($query->num_rows() > 0): ?>

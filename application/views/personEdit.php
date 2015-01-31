@@ -1,18 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 
-<title>SIMPLE CRUD APPLICATION</title>
 
-<link href="<?php echo base_url(); ?>res/css/style.css" rel="stylesheet" type="text/css" />
-
-<link href="<?php echo base_url(); ?>res/css/calendar.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="<?php echo base_url(); ?>res/js/calendar.js"></script>
-
-</head>
-<body>
-	<div class="content">
 		<h1><?php echo $title; ?></h1>
 		<?php echo $message; ?>
 		<form method="post" action="<?php echo $action; ?>">
@@ -26,14 +13,14 @@
 			</tr>
             <tr>
 				<td valign="top">Last Name<span style="color:red;">*</span></td>
-				<td><input type="text" name="name" class="text" value="<?php echo set_value('name',$this->form_data->surname); ?>"/>
-<?php echo form_error('name'); ?>
+				<td><input type="text" name="surname" class="text" value="<?php echo set_value('surname',$this->form_data->surname); ?>"/>
+<?php echo form_error('surname'); ?>
 				</td>
 			</tr>
             <tr>
 				<td valign="top">Username<span style="color:red;">*</span></td>
-				<td><input type="text" name="name" class="text" value="<?php echo set_value('name',$this->form_data->username); ?>"/>
-<?php echo form_error('name'); ?>
+				<td><input type="text" name="name" class="text" value="<?php echo set_value('username',$this->form_data->username); ?>"/>
+<?php echo form_error('username'); ?>
 				</td>
 			</tr>
             <tr>
@@ -58,6 +45,3 @@
 		</form>
 		<br />
 		<?php echo $link_back; ?>
-	</div>
-</body>
-</html>

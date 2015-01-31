@@ -7,15 +7,13 @@
     <p><?=$row->title?></p>
     <p><?=$row->body?></p>
     
-
-    <p><?=anchor('BlogPostController/blogs/' .$row->id, 'blogs');?></p>
-
     <hr>
 
     <?php endforeach; ?>
 <?php endif; ?>
 
-<p><?=anchor('BlogPostController', 'Back to Blogs');?></p>
+<p><?=anchor('blogpostcontroller', 'Back to Blogs');?></p>
 </br>
-<p><?=anchor('BlogPostController/create_blog/', 'Post a new Blog');?></p>
+<p><?=anchor('blogpostcontroller/create_blog/', 'Create a new Blog');?></p>
 
+</form>

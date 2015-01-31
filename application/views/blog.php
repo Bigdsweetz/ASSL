@@ -1,4 +1,4 @@
-<H1>Welcome to the Blog</H1>
+<Center><H1>Welcome to the Blog</H1></Center>
 
 <?php foreach($query->result() as $row): ?>
 

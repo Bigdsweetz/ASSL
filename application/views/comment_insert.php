@@ -10,7 +10,7 @@
 
 <p><input type ="submit" value="Submit Comment" /></p>
 
-</form>
-
 
 <?php endforeach; ?>
+
+</form>

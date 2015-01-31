@@ -68,14 +68,14 @@
                 <small>Open links in two different browsers</small>
             </div>
             <div class="chat">
-                <a href="<?=base_url()?>index.php/ChatController/chat/Bob/Robert">Chat(You with Robert)</a><br>
-                Link: <input type="text" name="" readonly="readonly" value="<?=base_url()?>index.php/ChatController/chat/Bob/Robert"><br>
+                <a href="<?=base_url()?>index.php/ChatController/chat/bob/robert">Chat(You with Robert)</a><br>
+                Link: <input type="text" name="" readonly="readonly" value="<?=base_url()?>index.php/ChatController/chat/bob/robert"><br>
 
                 <small>Open in one browser</small>
             </div>
             <div class="chat">
-                <a href="<?=base_url()?>index.php/ChatController/chat/Robert/Bob">Chat(Robert with You)</a><br>
-                Link: <input type="text" name="" readonly="readonly" value="<?=base_url()?>index.php/ChatController/chat/Robert/Bob"><br>
+                <a href="<?=base_url()?>index.php/ChatController/chat/robert/bob">Chat(Robert with You)</a><br>
+                Link: <input type="text" name="" readonly="readonly" value="<?=base_url()?>index.php/ChatController/chat/robert/bob"><br>
 
                 <small>Open in one browser</small>
             </div><br>

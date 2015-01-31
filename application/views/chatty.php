@@ -7,7 +7,7 @@ $_SESSION['username'] = $me; // Must be already set
 
 <html>
 <head>
-<title>Sample Chat Application</title>
+<title>The Opinion Point Chat</title>
 <style>
 body {
 	background-color: #eeeeee;

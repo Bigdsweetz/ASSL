@@ -9,7 +9,8 @@
 
 <p><input type ="submit" value="Submit Post" /></p>
 
-</form>
 
 
 <?php endforeach; ?>
+
+</form>

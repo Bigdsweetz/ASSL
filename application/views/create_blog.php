@@ -7,12 +7,6 @@
 
 <p><?=anchor('blogpostcontroller/blogs/' .$row->id, 'blogs');?></p>
 
-
-
 <hr>
 
-
-
 <?php endforeach; ?>
-
-<p><?=anchor('blogpostcontroller/create_blog/', 'Post a new Blog');?></p>

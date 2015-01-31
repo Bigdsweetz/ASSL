@@ -5,7 +5,7 @@ class ChatController extends CI_Controller {
   public function index() {  
     $this->load->view('header');  //this loads the header for the page
     $this->load->view('navbar');  //this loads the nav bar for the page  
-    $this->load->view('startChat');
+    $this->load->view('chat2');
     $this->load->view('footer');  //this loads the footer of the page  
   }
   
