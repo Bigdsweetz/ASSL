@@ -5,7 +5,7 @@
 <h3><?=$row->title?></h3>
 <p><?=$row->body?></p>
 
-<p><?=anchor('BlogPostController/blogs/' .$row->id, 'blogs');?></p>
+<p><?=anchor('blogpostcontroller/blogs/' .$row->id, 'blogs');?></p>
 
 
 
@@ -15,4 +15,4 @@
 
 <?php endforeach; ?>
 
-<p><?=anchor('BlogPostController/create_blog/', 'Post a new Blog');?></p>
+<p><?=anchor('blogpostcontroller/create_blog/', 'Post a new Blog');?></p>

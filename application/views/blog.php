@@ -5,7 +5,7 @@
 <h3><?=$row->title?></h3>
 <p><?=$row->body?></p>
 
-<p><?=anchor('BlogController/comments/' .$row->id, 'Comments');?></p>
+<p><?=anchor('blogcontroller/comments/' .$row->id, 'Comments');?></p>
 
 <hr>
 

@@ -8,20 +8,20 @@
     <p><?=$row->author?></p>
 
 
-    <p><?=anchor('BlogController/comments/' .$row->id, 'Comments');?></p>
+    <p><?=anchor('blogcontroller/comments/' .$row->id, 'Comments');?></p>
 
     <hr>
 
     <?php endforeach; ?>
 <?php endif; ?>
 
-<p><?=anchor('BlogController', 'Back to Blog');?></p>
+<p><?=anchor('blogcontroller', 'Back to Blog');?></p>
 </br>
 
 
 
 
-<?=form_open('BlogController/comment_insert');?>
+<?=form_open('blogcontroller/comment_insert');?>
 
 <?=form_hidden('entry_id', $this->uri->segment(3)) ;?>
 

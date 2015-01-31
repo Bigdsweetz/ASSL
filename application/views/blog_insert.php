@@ -1,6 +1,6 @@
 <H1>Welcome to the Blog</H1>
 
-<?=form_open('BlogPostController/blog_insert');?>
+<?=form_open('blogpostcontroller/blog_insert');?>
 
 
 

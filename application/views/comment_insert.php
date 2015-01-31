@@ -1,6 +1,6 @@
 <H1>Welcome to the Blog</H1>
 
-<?=form_open('BlogController/comment_insert');?>
+<?=form_open('blogcontroller/comment_insert');?>
 
 <?=form_hidden('entry_id', $this->uri->segment(3)) ;?>
 
